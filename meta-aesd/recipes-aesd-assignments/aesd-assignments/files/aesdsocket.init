@@ -1,0 +1,30 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          aesdsocket
+# Required-Start:    $network
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: AESD Socket Server
+### END INIT INFO
+
+case "$1" in
+  start)
+        echo "Starting aesdsocket"
+        /usr/bin/aesdsocket -d
+        ;;
+  stop)
+        echo "Stopping aesdsocket"
+        killall aesdsocket
+        ;;
+  restart)
+        killall aesdsocket
+        /usr/bin/aesdsocket -d
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit 0
