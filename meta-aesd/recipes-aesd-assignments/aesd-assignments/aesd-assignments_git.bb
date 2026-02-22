@@ -14,7 +14,7 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-vash6799.gi
           "
 
 # Pin to a specific commit in your assignments repo
-SRCREV = "0db4c35cd6398e175cae80068257caa3d19e7a8e"
+SRCREV = "7d517d88749e873c9cc1d31a1867ca42f82490f9"
 
 # Build from the server directory inside the repo
 S = "${WORKDIR}/git/server"
